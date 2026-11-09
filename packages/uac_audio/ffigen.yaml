@@ -1,0 +1,16 @@
+# Run with `dart run ffigen --config ffigen.yaml`.
+name: UacAudioBindings
+description: |
+  Bindings for `src/uac_audio.h`.
+
+  Regenerate bindings with `dart run ffigen --config ffigen.yaml`.
+output: 'lib/uac_audio_bindings_generated.dart'
+headers:
+  entry-points:
+    - 'src/uac_audio.h'
+  include-directives:
+    - 'src/uac_audio.h'
+ffi-native:
+comments:
+  style: any
+  length: full

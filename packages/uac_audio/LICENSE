@@ -1,0 +1,3 @@
+本目录里的 uac_audio.c、uac_audio.h 和 lib/ 下的 Dart 代码随 uac_bridge 仓库一起使用。
+
+src/miniaudio.h 是第三方 miniaudio 0.11.22，许可证见该文件末尾，可选公有领域或 MIT-0。
