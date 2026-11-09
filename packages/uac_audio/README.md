@@ -5,3 +5,5 @@
 设备访问使用同目录下的第三方头文件 `src/miniaudio.h`（miniaudio 0.11.22）。`src/uac_audio.c` 和 `lib/` 里的 Dart 绑定是本仓库写的。
 
 原生代码在 `hook/build.dart` 里编译，由依赖这个包的 Flutter 应用在构建时自动调用。
+
+`src/uac_device_loop.c` 是跑在嵌入式设备上的命令行程序，把指定的麦克风和喇叭环到 UAC2。用同目录的 Makefile 交叉编译。
