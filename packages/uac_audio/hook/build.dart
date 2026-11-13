@@ -20,6 +20,9 @@ void main(List<String> args) async {
         libraries.addAll(['log', 'm', 'aaudio', 'OpenSLES']);
       case OS.windows:
         libraries.addAll(['ole32', 'avrt', 'uuid', 'user32']);
+        // Source is UTF-8. MSVC otherwise reads it as the system code page and
+        // treats some Chinese bytes as a backslash, which breaks string literals.
+        flags.add('/utf-8');
       case OS.macOS || OS.iOS:
         // Sandboxed apps cannot dlopen CoreAudio. Link the frameworks directly.
         defines['MA_NO_RUNTIME_LINKING'] = null;
